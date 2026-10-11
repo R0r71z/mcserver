@@ -13,6 +13,28 @@ Servidor dedicado Fabric para hasta **20 jugadores**, expuesto con **playit.gg**
 | Java | 25 (Temurin) |
 | playit | 1.0.10 (compilado para macOS) |
 
+## Backup del mundo (iCloud)
+
+No pongas la carpeta `world/` en vivo dentro de iCloud (puede corromperse mientras juegas). El mundo vive local y se copia a iCloud con:
+
+```bash
+./backup-world.sh
+```
+
+Guarda en:
+`iCloud Drive/MinecraftBackups/mcserver/AAAA-MM-DD_HH-MM-SS/`
+
+Mantiene los últimos 10 backups (`KEEP=20 ./backup-world.sh` para cambiar). Ideal: parar el server o hacer `/save-all` antes.
+
+Restaurar (el server debe estar parado):
+
+```bash
+./restore-world.sh              # elige de una lista
+./restore-world.sh 2026-10-11_02-24-34   # backup concreto
+```
+
+Antes de sobrescribir, mueve el mundo actual a `world.pre-restore.*` por seguridad.
+
 ## Arrancar
 
 ```bash

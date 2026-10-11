@@ -1,0 +1,15 @@
+.env
+logs/
+world/
+.fabric/
+libraries/
+versions/
+*.log
+usercache.json
+session.lock
+playit-agent/
+playit-build/
+playit.sock
+playit.toml
+.playitd.pid
+.playit-claim-code

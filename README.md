@@ -1,6 +1,6 @@
 # Servidor Minecraft Fabric 26.3
 
-Servidor dedicado Fabric para hasta **20 jugadores**, expuesto con **playit.gg** (sin port forward; tu red está en CGNAT).
+Servidor dedicado Fabric para hasta **20 jugadores**. Con CGNAT, el acceso remoto se hace con **Tailscale**.
 
 ## Stack
 
@@ -11,7 +11,43 @@ Servidor dedicado Fabric para hasta **20 jugadores**, expuesto con **playit.gg**
 | Fabric API | 0.162.0+26.3 |
 | JourneyMap | 26.3-6.0.10 |
 | Java | 25 (Temurin) |
-| playit | 1.0.10 (compilado para macOS) |
+
+## Acceso con Tailscale
+
+Sin port forward ni límites de tráfico de túneles. Cada jugador instala Tailscale (gratis Personal).
+
+### En este Mac (host del server)
+
+1. Instala Tailscale: https://tailscale.com/download/mac  
+   (o App Store → “Tailscale”, o `brew install --cask tailscale` en tu terminal — pide contraseña).
+2. Abre **Tailscale** → **Log in** (Google/Microsoft/GitHub/Apple).
+3. Deja el interruptor **Connected** en ON.
+4. Copia la IP Tailscale de este Mac:
+
+```bash
+/Applications/Tailscale.app/Contents/MacOS/Tailscale ip -4
+# o: tailscale ip -4
+```
+
+Verás algo como `100.x.x.x`.
+
+5. Arranca Minecraft: `./start.sh`
+6. En [admin.tailscale.com](https://login.tailscale.com/admin/machines) → **Invite users** / comparte invite link a tus amigos.
+
+### En cada amigo (jugador)
+
+1. Instala Tailscale y acepta tu invitación al mismo tailnet.
+2. Connected = ON.
+3. En Minecraft → Multiplayer → Direct Connection: `100.x.x.x:25565`  
+   (la IP del Mac host, no la de ellos).
+
+Opcional: en el admin de Tailscale, renombra la máquina a `mcserver` y pueden usar `mcserver:25565` si MagicDNS está activo.
+
+## Arrancar
+
+```bash
+./start.sh
+```
 
 ## Backup del mundo (iCloud)
 
@@ -35,50 +71,48 @@ Restaurar (el server debe estar parado):
 
 Antes de sobrescribir, mueve el mundo actual a `world.pre-restore.*` por seguridad.
 
-## Arrancar
-
-```bash
-./start.sh
-```
-
-Esto inicia `playitd` (si ya está claimed) y el servidor Fabric.
-
-Solo el túnel:
-
-```bash
-./start-playit.sh
-./stop-playit.sh
-```
-
-## Setup playit (una vez)
-
-1. Abre el enlace de claim (te lo da el agente) e inicia sesión en playit.gg.
-2. En el dashboard, crea un túnel **Minecraft Java** → local `127.0.0.1:25565`.
-3. Comparte a tus amigos la dirección que playit muestra (algo como `xxx.playit.gg:12345`).
-
-Si necesitas reclamar de nuevo:
-
-```bash
-./bin/playitd --socket-path=./playit.sock --secret-path=./playit.toml -l ./logs/playitd.log &
-CODE=$(./bin/playit claim generate)
-open "$(./bin/playit claim url --name mcserver --type self-managed "$CODE")"
-./bin/playit --socket-path=./playit.sock claim exchange "$CODE"
-```
-
 ## Dominio Cloudflare (`mc.r0r71z.dev`)
 
-El script `update-dns.sh` sigue pudiendo actualizar un registro A, pero **con CGNAT no sirve para jugar**. Usa la dirección de playit para conectar.
+`update-dns.sh` puede actualizar un registro A, pero **con CGNAT no sirve para jugar**. Usa Tailscale. Si más adelante tienes IP pública real, puedes volver al port forward + dominio.
 
-Si más adelante tienes IP pública real, puedes volver al port forward + `mc.r0r71z.dev`.
+## Mods en el server (`mods/`)
+
+| Mod | Versión | Notas |
+|---|---|---|
+| Fabric API | 0.162.0+26.3 | requerido |
+| JourneyMap | 26.3-6.0.10 | mapa |
+| Balm | 26.3.0.3 | requerido por TrashSlot |
+| TrashSlot | 26.3.0.1 | slot de basura |
+| SecurityCraft (Fabric port) | V0.6 | CurseForge port, no el oficial NeoForge |
+| Areed's CoreLib | 1.3.0 | requerido por TheLandClaim |
+| TheLandClaim (ClaimsMod) | 1.1.1 | protección de terreno |
+| Discord-MC-Chat (DMCC) | 2.7.1 | chat bidireccional Discord ↔ Minecraft (solo server) |
+
+## Discord bridge (DMCC)
+
+Solo server. Config: `config/discord-mc-chat.json` (ignorado por git; contiene el token).
+
+1. Crea un bot en https://discord.com/developers/applications → Bot → token.
+2. Invita el bot al Discord con permisos de leer/enviar mensajes y Manage Webhooks.
+3. Activa modo desarrollador en Discord → copia el ID del canal de chat.
+4. Edita `config/discord-mc-chat.json`:
+   - `generic.botToken` → token del bot
+   - `generic.channelId` → ID del canal
+5. Reinicia el server (`./start.sh`). Sin token/canal válidos, DMCC falla al arrancar.
+
+Docs: https://blog.xujiayao.com/posts/4ba0a17a/
 
 ## Clientes
 
-1. Minecraft **26.3**
-2. Fabric Loader
-3. Fabric API `0.162.0+26.3`
-4. JourneyMap `26.3-6.0.10` (recomendado)
+1. Minecraft **26.3** + Fabric Loader
+2. Fabric API `0.162.0+26.3`
+3. JourneyMap `26.3-6.0.10` (recomendado)
+4. **TrashSlot** (opcional): Balm + TrashSlot en el cliente
+5. **SecurityCraft Fabric** V0.6 (client + server; mismos jars que el server)
+6. **TheLandClaim**: CoreLib + ClaimsMod en el cliente si hace falta UI/comandos (sigue la doc del mod)
 
 ## Notas
 
 - EULA aceptado, `max-players=20`, whitelist off.
 - RAM: 2–6 GB en `start.sh`.
+- Reinicia el server (`stop` + `./start.sh`) tras añadir mods.

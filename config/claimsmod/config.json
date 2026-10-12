@@ -1,0 +1,9 @@
+{
+  "claim-limit": 100,
+  "explosions.allow-tnt-blocks": false,
+  "explosions.allow-tnt-minecarts": false,
+  "explosions.allow-end-crystals": false,
+  "explosions.allow-creepers": true,
+  "explosions.allow-beds": false,
+  "explosions.allow-respawn-anchors": false
+}

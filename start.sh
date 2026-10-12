@@ -5,16 +5,9 @@ cd "$(dirname "$0")"
 export JAVA_HOME="${JAVA_HOME:-/Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home}"
 export PATH="$JAVA_HOME/bin:$PATH"
 
-# Optional: keep Cloudflare A record updated (not used for joins while on CGNAT + playit)
+# Optional Cloudflare DDNS (only useful with a real public IP + port forward)
 if [[ -f .env ]] && [[ "${SKIP_DNS_UPDATE:-0}" != "1" ]]; then
-  ./update-dns.sh || echo "DNS update skipped/failed (OK if using playit only)."
-fi
-
-# Start playit tunnel agent if claimed
-if [[ -f playit.toml ]]; then
-  ./start-playit.sh
-else
-  echo "playit not claimed yet — friends cannot join from outside until you finish playit setup."
+  ./update-dns.sh || echo "DNS update skipped/failed."
 fi
 
 # 6 GB heap suited for ~20 players with Fabric API + JourneyMap

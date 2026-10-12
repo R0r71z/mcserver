@@ -1,4 +1,6 @@
 .env
+config/discord-mc-chat.json
+config/discord-mc-chat-backup.json
 logs/
 world/
 .fabric/
@@ -7,9 +9,4 @@ versions/
 *.log
 usercache.json
 session.lock
-playit-agent/
-playit-build/
-playit.sock
-playit.toml
-.playitd.pid
-.playit-claim-code
+world.pre-restore.*/

@@ -1,0 +1,12 @@
+{
+  "anger_ticks": 400.0,
+  "strike_reach": 2.6,
+  "weakness_ticks": 60.0,
+  "alert_radius": 12.0,
+  "attack_damage": 4.0,
+  "max_health": 20.0,
+  "xp_reward": 3.0,
+  "armor": 2.0,
+  "movement_speed": 0.2,
+  "attack_cooldown_ticks": 30.0
+}

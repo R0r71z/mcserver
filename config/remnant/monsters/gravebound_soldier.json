@@ -1,0 +1,11 @@
+{
+  "share_radius": 8.0,
+  "movement_speed": 0.26,
+  "xp_reward": 7.0,
+  "armor": 5.0,
+  "sweep_pull_blocks": 1.0,
+  "max_health": 24.0,
+  "attack_damage": 5.0,
+  "thrust_reach": 3.2,
+  "attack_cooldown_ticks": 26.0
+}

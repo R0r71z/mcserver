@@ -1,0 +1,13 @@
+{
+  "pounce_slow_ticks": 40.0,
+  "max_health": 22.0,
+  "attack_cooldown_ticks": 24.0,
+  "ambush_radius": 6.0,
+  "pounce_cooldown_ticks": 80.0,
+  "attack_damage": 5.0,
+  "armor": 3.0,
+  "xp_reward": 6.0,
+  "pounce_damage": 6.0,
+  "rebury_ticks": 400.0,
+  "movement_speed": 0.3
+}

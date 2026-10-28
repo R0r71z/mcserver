@@ -1,0 +1,12 @@
+{
+  "felled_banner_radius": 64.0,
+  "build_protection": 1.0,
+  "arrival_search_radius": 48.0,
+  "rituals_realm_only": 1.0,
+  "spawn_block_light_max": 7.0,
+  "crossing_cooldown_ticks": 100.0,
+  "kindle_ticks": 120.0,
+  "spawn_thinning": 0.4,
+  "guidance_radius_chunks": 48.0,
+  "crossing_ticks": 40.0
+}

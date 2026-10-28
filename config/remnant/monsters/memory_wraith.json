@@ -1,0 +1,16 @@
+{
+  "bolt_range": 24.0,
+  "hold_max_distance": 12.0,
+  "hold_min_distance": 6.0,
+  "max_health": 26.0,
+  "movement_speed": 0.3,
+  "bolt_speed": 0.7,
+  "attack_damage": 6.0,
+  "armor": 0.0,
+  "blink_chance": 0.5,
+  "bolt_damage": 6.0,
+  "xp_reward": 8.0,
+  "blink_trigger_distance": 3.0,
+  "blink_cooldown_ticks": 60.0,
+  "attack_cooldown_ticks": 40.0
+}

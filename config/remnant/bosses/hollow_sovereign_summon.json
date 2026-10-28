@@ -1,0 +1,8 @@
+{
+  "config_version": 3,
+  "pedestal_four_activation_block": "minecraft:soul_lantern",
+  "pedestal_two_activation_block": "minecraft:gold_block",
+  "pedestal_one_activation_block": "minecraft:gold_block",
+  "portal_activation_item": "remnant_bosses:sovereigns_seal",
+  "pedestal_three_activation_block": "minecraft:soul_lantern"
+}

@@ -1,0 +1,5 @@
+{
+  "maxClaimArea": 10000,
+  "maxTotalPerPlayer": 40000,
+  "allowRedstoneControls": false
+}

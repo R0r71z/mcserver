@@ -1,0 +1,41 @@
+{
+  "cooldownSeconds": 60,
+  "graveDurationSeconds": 180,
+  "collectionDurationSeconds": 300,
+  "xpPercentage": 100,
+  "forceLoadGraveChunks": false,
+  "graveTextUpdateIntervalTicks": 20,
+  "reviveOfferDurationSeconds": 30,
+  "finalDamageTypes": [
+    "minecraft:lava",
+    "minecraft:out_of_world"
+  ],
+  "finalDimensions": [],
+  "belowWorldDeathsAreFinal": true,
+  "manualRevive": {
+    "enabled": true,
+    "allowDuringReviveCooldown": true,
+    "durationSeconds": 60,
+    "requiredHits": 1,
+    "allowedMisses": 20,
+    "helperRetryCooldownSeconds": 0,
+    "reviveHealthHalfHearts": 10,
+    "reviveLockSeconds": 30,
+    "weaknessSeconds": 0,
+    "weaknessAmplifier": 0,
+    "slownessSeconds": 0,
+    "slownessAmplifier": 0,
+    "miningFatigueSeconds": 0,
+    "miningFatigueAmplifier": 0,
+    "effects": [],
+    "difficulty": {
+      "speedPercent": 50,
+      "speedIncreasePercent": 0,
+      "maximumSpeedPercent": 50,
+      "targetVariationPercent": 0,
+      "alternatingDirection": false
+    }
+  },
+  "debugLogging": false,
+  "diagnosticTestModeEnabled": false
+}

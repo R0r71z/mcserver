@@ -1,0 +1,14 @@
+{
+  "attack_damage": 6.0,
+  "armor": 6.0,
+  "movement_speed": 0.16,
+  "attack_cooldown_ticks": 72.0,
+  "pulse_radius": 5.0,
+  "burst_damage": 8.0,
+  "xp_reward": 10.0,
+  "max_health": 30.0,
+  "burst_radius": 3.0,
+  "pulse_damage": 6.0,
+  "pulse_slow_ticks": 40.0,
+  "knockback_resistance": 1.0
+}

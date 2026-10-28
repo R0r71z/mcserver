@@ -1,0 +1,15 @@
+{
+  "scorch_burn_ticks": 60.0,
+  "xp_reward": 5.0,
+  "burst_burn_ticks": 40.0,
+  "burst_radius": 2.5,
+  "attack_damage": 3.0,
+  "movement_speed": 0.33,
+  "scorch_damage": 4.0,
+  "armor": 4.0,
+  "scorch_range": 3.0,
+  "max_health": 16.0,
+  "scorch_arc_degrees": 60.0,
+  "attack_cooldown_ticks": 30.0,
+  "burst_damage": 3.0
+}

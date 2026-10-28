@@ -1,0 +1,10 @@
+{
+  "armor": 6.0,
+  "attack_damage": 6.0,
+  "max_health": 34.0,
+  "movement_speed": 0.24,
+  "xp_reward": 14.0,
+  "attack_cooldown_ticks": 30.0,
+  "rally_cooldown_ticks": 300.0,
+  "aura_radius": 10.0
+}

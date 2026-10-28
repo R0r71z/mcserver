@@ -1,0 +1,13 @@
+{
+  "bolt_damage": 8.0,
+  "max_health": 24.0,
+  "hold_min_distance": 8.0,
+  "attack_cooldown_ticks": 20.0,
+  "attack_damage": 3.0,
+  "armor": 4.0,
+  "xp_reward": 9.0,
+  "kick_damage": 3.0,
+  "hold_max_distance": 14.0,
+  "retreat_distance": 6.0,
+  "movement_speed": 0.25
+}

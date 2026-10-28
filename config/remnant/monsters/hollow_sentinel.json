@@ -1,0 +1,12 @@
+{
+  "shield_reduction": 0.6,
+  "strike_damage": 9.0,
+  "shield_disable_ticks": 100.0,
+  "bash_damage": 4.0,
+  "attack_damage": 7.0,
+  "max_health": 30.0,
+  "xp_reward": 8.0,
+  "armor": 8.0,
+  "movement_speed": 0.23,
+  "attack_cooldown_ticks": 30.0
+}

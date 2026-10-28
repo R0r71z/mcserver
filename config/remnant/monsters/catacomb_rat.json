@@ -1,0 +1,13 @@
+{
+  "max_health": 8.0,
+  "swarm_radius": 12.0,
+  "attack_cooldown_ticks": 16.0,
+  "flee_light_level": 10.0,
+  "swarm_min": 3.0,
+  "swarm_max": 6.0,
+  "attack_damage": 2.0,
+  "anger_ticks": 400.0,
+  "armor": 0.0,
+  "xp_reward": 1.0,
+  "movement_speed": 0.32
+}

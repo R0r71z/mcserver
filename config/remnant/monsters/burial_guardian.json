@@ -1,0 +1,17 @@
+{
+  "sweep_knockback": 1.4,
+  "unseal_damage": 10.0,
+  "xp_reward": 60.0,
+  "max_health": 140.0,
+  "turn_degrees": 6.0,
+  "armor": 14.0,
+  "movement_speed": 0.18,
+  "attack_cooldown_ticks": 36.0,
+  "slam_damage": 14.0,
+  "attack_damage": 14.0,
+  "phase_two_percent": 50.0,
+  "unseal_wither_ticks": 60.0,
+  "unseal_cooldown_ticks": 200.0,
+  "slam_radius": 4.0,
+  "sweep_damage": 14.0
+}

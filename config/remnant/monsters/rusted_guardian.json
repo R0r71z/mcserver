@@ -1,0 +1,15 @@
+{
+  "xp_reward": 25.0,
+  "turn_degrees": 8.0,
+  "knockback_resistance": 0.9,
+  "attack_damage": 14.0,
+  "movement_speed": 0.2,
+  "smash_damage": 14.0,
+  "armor": 14.0,
+  "sweep_reach": 2.6,
+  "sweep_damage": 11.0,
+  "smash_radius": 3.0,
+  "sweep_knockback": 1.6,
+  "max_health": 70.0,
+  "attack_cooldown_ticks": 40.0
+}

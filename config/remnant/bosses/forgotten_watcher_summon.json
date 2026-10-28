@@ -1,0 +1,8 @@
+{
+  "config_version": 3,
+  "pedestal_four_activation_block": "minecraft:lectern",
+  "pedestal_two_activation_block": "minecraft:calcite",
+  "pedestal_one_activation_block": "minecraft:amethyst_block",
+  "portal_activation_item": "remnant_bosses:memory_lens",
+  "pedestal_three_activation_block": "minecraft:chiseled_sandstone"
+}

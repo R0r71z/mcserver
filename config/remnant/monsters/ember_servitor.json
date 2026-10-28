@@ -1,0 +1,17 @@
+{
+  "xp_reward": 5.0,
+  "max_health": 14.0,
+  "bolt_range": 18.0,
+  "repair_radius": 10.0,
+  "hold_max_distance": 9.0,
+  "armor": 2.0,
+  "movement_speed": 0.3,
+  "attack_cooldown_ticks": 50.0,
+  "bolt_speed": 0.6,
+  "repair_reach": 3.0,
+  "attack_damage": 3.0,
+  "hold_min_distance": 4.0,
+  "repair_heal": 0.5,
+  "bolt_damage": 5.0,
+  "bolt_burn_ticks": 30.0
+}

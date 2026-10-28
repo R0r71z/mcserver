@@ -1,0 +1,15 @@
+{
+  "group_stagger_ticks": 16.0,
+  "xp_reward": 3.0,
+  "attack_damage": 5.0,
+  "movement_speed": 0.28,
+  "hold_max_distance": 12.0,
+  "armor": 0.0,
+  "bolt_range": 20.0,
+  "bolt_speed": 0.55,
+  "hold_min_distance": 6.0,
+  "max_health": 8.0,
+  "bolt_damage": 5.0,
+  "attack_cooldown_ticks": 60.0,
+  "group_radius": 12.0
+}

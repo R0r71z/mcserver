@@ -1,0 +1,17 @@
+{
+  "xp_reward": 20.0,
+  "max_health": 50.0,
+  "ambush_radius": 7.0,
+  "armor": 8.0,
+  "movement_speed": 0.3,
+  "attack_cooldown_ticks": 30.0,
+  "ambush_damage": 8.0,
+  "ambush_cooldown_ticks": 160.0,
+  "attack_damage": 9.0,
+  "rehide_ticks": 600.0,
+  "slash_reach": 2.2,
+  "slash_damage": 9.0,
+  "max_combo": 2.0,
+  "knockback_resistance": 0.4,
+  "ambush_slow_ticks": 60.0
+}

@@ -1,0 +1,14 @@
+{
+  "attack_damage": 4.0,
+  "armor": 4.0,
+  "movement_speed": 0.25,
+  "attack_cooldown_ticks": 30.0,
+  "bash_damage": 3.0,
+  "shield_reduction": 0.6,
+  "xp_reward": 0.0,
+  "max_health": 20.0,
+  "sigil_life_ticks": 400.0,
+  "strike_damage": 4.0,
+  "boss_life_ticks": 600.0,
+  "shield_disable_ticks": 100.0
+}
